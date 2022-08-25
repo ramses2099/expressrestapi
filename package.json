@@ -1,0 +1,27 @@
+{
+  "name": "expressrestapi",
+  "version": "1.0.0",
+  "description": "\"# expressrestapi\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramses2099/expressrestapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramses2099/expressrestapi/issues"
+  },
+  "homepage": "https://github.com/ramses2099/expressrestapi#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
