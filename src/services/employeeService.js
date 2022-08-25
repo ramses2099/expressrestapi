@@ -1,29 +1,25 @@
 //In src/controllers/employeeService
-const employeeService = require('../services/employeeService');
+const Employees = require('../database/employee');
 
-const getEmployees = (req, res) => {
-    const allEmployees = employeeService.getEmployees();
-    res.send('Get All employees');
+const getEmployees = () => {
+    const allEmployees = Employees.getAllEmployees();
+    return allEmployees;
 }
 
-const getOneEmployee = (req, res) => {
-    const employee = employeeService.getOneEmployee();    
-    res.send('Get an existing employees');
+const getOneEmployee = () => {
+    return;
 }
 
-const createNewEmployee = (req, res) => {
-    const createEmployee = employeeService.createNewEmployee();
-    res.send('Create a new employees');
+const createNewEmployee = (newEmployee) => {
+    return;
 }
 
-const updateOneEmployee = (req, res) => {
-    const updatedEmployee = employeeService.updateOneEmployee();
-    res.send('Update an existing employees');
+const updateOneEmployee = () => {
+    return;
 }
 
-const deleteOneEmployee = (req, res) => {
-    employeeService.deleteOneEmployee();
-    res.send('Delete an existing employees');
+const deleteOneEmployee = () => {
+    return;
 }
 
 module.exports ={
@@ -33,3 +29,5 @@ module.exports ={
     updateOneEmployee,
     deleteOneEmployee,
 };
+
+
