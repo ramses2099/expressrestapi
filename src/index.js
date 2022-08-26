@@ -13,6 +13,9 @@ var corsOptions = {
 const authRoutes = require('./v1/routes/auth')
 const v1EmployeeRouter = require("./v1/routes/employeeRoutes");
 
+//DOC
+const { swaggerDocs: V1SwaggerDocs } = require("./v1/swagger");
+
 const app = express(); 
 const PORT = process.env.PORT || 3000; 
 
@@ -34,4 +37,5 @@ app.use("/api/v1/employees", v1EmployeeRouter);
 
 app.listen(PORT, () => { 
     console.log(`API is listening on port ${PORT}`); 
+    V1SwaggerDocs(app, PORT);
 });
