@@ -4,7 +4,7 @@ const register = async (req, res) => {
     const user = {
         name: req.body.name,
         email: req.body.email,
-        password: 'password'
+        password: req.body.password
     };
 
     try {
@@ -18,4 +18,24 @@ const register = async (req, res) => {
 
 }
 
-module.exports = {register}
+
+const login = async (req, res) => {
+    const user = {
+        email: req.body.email,        
+        password: req.body.password
+    };
+
+    try {
+        const token = await authService.login(user);
+
+        res.header('auth-token',token).json({error:null, data:'welcome...'});
+
+    } catch (error) {
+        res.status(400).json({error});
+    }
+
+}
+
+
+
+module.exports = {register,login}
