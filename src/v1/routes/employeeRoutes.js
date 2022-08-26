@@ -1,10 +1,11 @@
 //In src/v1/routes/employeeRoutes.js
 const express = require('express');
 const router = express.Router();
+const verifyToken = require('./validate-token');
 
 const employeeController = require('../../controllers/employeeController');
 
-router.get('/', employeeController.getEmployees);
+router.get('/', verifyToken, employeeController.getEmployees);
 
 router.get('/:employeeId', employeeController.getOneEmployee);
 
