@@ -10,6 +10,7 @@
 7. npm i @hapi/joi
 8. npm i -g nodemon
 9. npm i cors
+10. npm i swagger-jsdoc swagger-ui-express 
 
 ## All Endpoint
 
